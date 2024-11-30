@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Website || Rexxy</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Snkrs</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href=""><i class="ri-search-line"></i></a>
+            <a href=""><i class="ri-shopping-cart-2-line"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="2000">
+            <img src="img/hero1.png" class="one">
+        </div>
+
+        <div class="hero-text">
+            <h1 data-aos="fade-right" data-aos-duration="1500">Nike Air <br> Dunk-270</h1>
+            <p data-aos="flip-down" data-aos-duration="1400" data-aos-delay="200">Nike's 1st Lifestyle Air Max returns with a vibrant color gradient that's sure to turn heads.vibrant color gradient that's sure to turn heads.</p>
+            <h5 data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="300">$240.00</h5>
+            <div class="hero-btnn" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
+                <a href="#" class="btn">Add to bag</a>
+                <a href="#" class="btn2">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="100">
+            <li><img src="img/p1.png" onclick="slider('img/hero1.png')"></li>
+        </div>
+
+        <div class="box" data-aos="zoom-out-left" data-aos-duration="1300" data-aos-delay="150">
+            <li><img src="img/p2.png" onclick="slider('img/hero2.png')"></li>
+        </div>
+
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1300" data-aos-delay="200">
+            <li><img src="img/p3.png" onclick="slider('img/hero1.png')"></li>
+        </div>
+    </div>
+
+
+    <a href="#" class="scroll" data-aos="zoom-out-left" data-aos-duration="1200" data-aos-delay="300"><i class="ri-scroll-to-bottom-line"></i></a>
+    
+    <script type="text/javascript">
+        function slider(anything) {
+            document.querySelector('.one').src = anything;
+        };
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open')
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 1
+      });
+    </script>
+</body>
+</html>
